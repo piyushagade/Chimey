@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutMode="clipBounds"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_bg"
+    android:background="#fabc3d"
+    android:gravity="left|bottom">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CHIMEY"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:textColor="#AAFFFFFF"
+        android:textSize="40sp"
+        android:typeface="monospace"/>
+
+    <ScrollView
+        android:layout_width="270sp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title"
+        android:id="@+id/main_sv">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rl_sv">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select interval"
+                android:layout_marginTop="22dp"
+                android:id="@+id/sound_title"
+                android:textColor="#AAFFFFFF"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ll_sound"
+                android:layout_below="@id/sound_title"
+                android:weightSum="2">
+                <Spinner
+                    android:layout_width="260sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sound"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/card_background_layout"
+                    android:spinnerMode="dropdown"
+                    android:layout_weight="2"/>
+
+                <Button
+                    android:layout_width="76sp"
+                    android:layout_height="46sp"
+                    android:text="Play"
+                    android:id="@+id/play"
+                    android:textSize="14sp"
+                    android:layout_weight="0.0"
+                    android:background="@drawable/blank"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select interval"
+                android:layout_marginTop="22dp"
+                android:layout_below="@+id/ll_sound"
+                android:id="@+id/interval_title"
+                android:textColor="#AAFFFFFF"/>
+
+            <Spinner
+                android:layout_width="260sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/interval"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/card_background_layout"
+                android:layout_below="@+id/interval_title"
+                android:layout_centerHorizontal="true"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Behaviour"
+                android:layout_marginTop="22dp"
+                android:layout_below="@+id/interval"
+                android:id="@+id/behaviour_title"
+                android:textColor="#AAFFFFFF"/>
+
+            <Spinner
+                android:layout_width="260sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/behaviour"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/card_background_layout"
+                android:layout_below="@+id/behaviour_title"
+                android:layout_centerHorizontal="true"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do not disturb period"
+                android:layout_marginTop="22dp"
+                android:layout_below="@+id/behaviour"
+                android:id="@+id/dnd_title"
+                android:textColor="#AAFFFFFF"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="260sp"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_below="@+id/dnd_title"
+                android:layout_alignStart="@+id/dnd_title"
+                android:id="@+id/bound_ll">
+
+                <Button
+                    android:layout_width="130sp"
+                    android:layout_height="wrap_content"
+                    android:text="from"
+                    android:typeface="monospace"
+                    android:id="@+id/from"
+                    android:layout_below="@+id/bound_ll"
+                    android:layout_marginTop="6sp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/card_background_layout"
+                    android:layout_weight=".95"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="56sp"
+                    android:text="-"
+                    android:id="@+id/textView2"
+                    android:background="@drawable/card_background_layout"
+                    android:textColor="#AAFFFFFF"
+                    android:layout_weight=".1"/>
+
+                <Button
+                    android:layout_width="130sp"
+                    android:layout_height="wrap_content"
+                    android:text="to"
+                    android:typeface="monospace"
+                    android:id="@+id/to"
+                    android:layout_below="@+id/bound_ll"
+                    android:layout_marginTop="6sp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/card_background_layout"
+                    android:layout_weight=".95"/>
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Chimey"
+                android:typeface="monospace"
+                android:id="@+id/set_alarm"
+                android:layout_below="@+id/bound_ll"
+                android:layout_marginTop="26sp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/card_background_layout"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <include layout="@layout/footer_icons_1"/>
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutMode="clipBounds"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_bg"
+    android:background="#fabc3d">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CHIMEY-ing"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:textColor="#AAFFFFFF"
+        android:textSize="40sp"
+        android:typeface="monospace"/>
+
+
+    <include layout="@layout/footer_icons_1"
+             android:id="@+id/include"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rl_clock"
+        android:layout_alignParentTop="true"
+        android:padding="20sp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="24dp">
+
+            <ImageView
+                android:layout_width="500sp"
+                android:layout_height="500sp"
+                android:id="@+id/clock_1"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/clock_1"/>
+
+            <ImageView
+                android:layout_width="500sp"
+                android:layout_height="500sp"
+                android:id="@+id/clock_2"
+                android:src="@drawable/clock_2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_text"
+                android:layout_marginBottom="120dp"
+                android:layout_alignBottom="@+id/clock_2"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="every"
+                    android:id="@+id/textView"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="20sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30 minutes"
+                    android:id="@+id/interval"
+                    android:layout_below="@+id/textView"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30sp"
+                    android:textColor="#66000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="with sound"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/textView4"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/interval"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R2-D2"
+                    android:id="@+id/sound"
+                    android:textSize="30sp"
+                    android:textColor="#66000000"
+                    android:layout_below="@+id/textView4"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="behaviour"
+                    android:id="@+id/textView5"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/sound"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beep Once"
+                    android:id="@+id/behaviour"
+                    android:textSize="30sp"
+                    android:textColor="#66000000"
+                    android:layout_below="@+id/textView5"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Chimey"
+        android:typeface="monospace"
+        android:id="@+id/stop_alarm"
+        android:background="@drawable/card_background_layout"
+        android:layout_above="@+id/include"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"/>
+
+</RelativeLayout>

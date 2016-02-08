@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_footerIcons"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:gravity="right" >
+
+    <ImageButton
+        android:id="@+id/i_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="34dp"
+        android:background="@drawable/menu" />
+
+    <ImageButton
+        android:id="@+id/i_reload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_marginRight="34dp"
+        android:background="@drawable/reload"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/i_scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@+id/i_reload"
+        android:background="@drawable/scores"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/i_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/help"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/i_scores"
+        android:layout_toLeftOf="@+id/i_scores"
+        android:layout_toStartOf="@+id/i_scores"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/i_mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mute"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/i_help"
+        android:layout_toLeftOf="@+id/i_help"
+        android:layout_toStartOf="@+id/i_help"
+        android:visibility="gone"/>
+</RelativeLayout>
