@@ -31,7 +31,4 @@ What It Does
 
 
 
-[5]: https://github.com/piyushagade/material-intro
-[6]: https://github.com/HeinrichReimer
-
-[12]: http://i.imgur.com/baTV5CN.png
+[12]: http://i.imgur.com/Facgjk8.png
